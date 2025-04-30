@@ -1,0 +1,15 @@
+{
+  "profiles": {
+    "Docker Compose": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "serviceActions": {
+        "company.services.transaction": "StartDebugging",
+        "company.services.antifraud": "StartDebugging",
+        "kafka": "StartWithoutDebugging",
+        "postgres": "StartWithoutDebugging",
+        "zookeeper": "StartWithoutDebugging"
+      }
+    }
+  }
+}
