@@ -9,6 +9,11 @@ public static class BusContainer
 {
     public static IServiceCollection RegisterKafka(this IServiceCollection services, IConfiguration configuration)
     {
+        var transactionCreatedTopic = configuration["AppSettings:TransactionCreatedTopic"];
+        var transactionUpdatedTopic = configuration["AppSettings:TransactionUpdatedTopic"];
+        var groupId = configuration["AppSettings:GroupId"];
+        var kafkaHost = configuration["AppSettings:KafkaHost"];
+
         return services.AddMassTransit(x =>
         {
             x.UsingInMemory();
@@ -16,12 +21,12 @@ public static class BusContainer
             x.AddRider(rider =>
             {
                 rider.AddConsumer<TransactionUpdatedConsumer>();
-                rider.AddProducer<TransactionCreatedContract>("transaction-created");
+                rider.AddProducer<TransactionCreatedContract>(transactionCreatedTopic);
 
                 rider.UsingKafka((context, k) =>
                 {
-                    k.Host("localhost:9092");
-                    k.TopicEndpoint<TransactionCreatedContract>("transaction-updated", "consumer-transaction", e =>
+                    k.Host(kafkaHost);
+                    k.TopicEndpoint<TransactionUpdatedConsumer>(transactionUpdatedTopic, groupId, e =>
                     {
                         e.ConfigureConsumer<TransactionUpdatedConsumer>(context);
                         e.CreateIfMissing();

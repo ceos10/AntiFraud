@@ -1,8 +1,6 @@
-﻿using System.Transactions;
+﻿namespace Company.Services.Bus.Contracts;
 
-namespace Company.Services.Bus.Contracts;
-
-public class TransactionUpdatedContract
+public record TransactionUpdatedContract
 {
     public Guid TransactionId { get; set; }
     public TransactionStatus Status { get; set; }

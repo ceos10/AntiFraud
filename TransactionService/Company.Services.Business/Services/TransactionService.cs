@@ -24,7 +24,7 @@ public class TransactionService(
         return new TransactionViewModel();//Convert
     }
 
-    public async Task UpdateTransactionStatusAsync(Guid transactionId, Bus.Contracts.TransactionStatus status)
+    public async Task UpdateTransactionStatusAsync(Guid transactionId, TransactionStatus status)
     {
         var transaction = await _transactionRepository.GetAsync(transactionId);
         if (transaction == null) return;
