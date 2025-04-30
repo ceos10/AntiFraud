@@ -3,11 +3,18 @@ using MassTransit;
 
 namespace Company.Services.Business.Consumers;
 
-public class TransactionUpdatedConsumer :
-    IConsumer<TransactionUpdatedContract>
+public class TransactionUpdatedConsumer
+    :IConsumer<TransactionUpdatedContract>
 {
-    public Task Consume(ConsumeContext<TransactionUpdatedContract> context)
+    public async Task Consume(ConsumeContext<TransactionUpdatedContract> context)
     {
-        return Task.CompletedTask;
+        try
+        {
+            var test = context.Message;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
     }
 }

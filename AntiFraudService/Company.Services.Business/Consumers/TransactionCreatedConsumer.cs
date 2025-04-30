@@ -1,13 +1,23 @@
 ﻿using Company.Services.Bus.Contracts;
+using Company.Services.Business.Interfaces;
 using MassTransit;
 
 namespace Company.Services.Business.Consumers;
 
-public class TransactionCreatedConsumer :
-    IConsumer<TransactionCreatedContract>
+public class TransactionCreatedConsumer(
+    IAntiFraudService _antiFraudService)
+    :IConsumer<TransactionCreatedContract>
 {
-    public Task Consume(ConsumeContext<TransactionCreatedContract> context)
+    public async Task Consume(ConsumeContext<TransactionCreatedContract> context)
     {
-        return Task.CompletedTask;
+        try
+        {
+            var transaction = context.Message;
+            await _antiFraudService.AnalyzeTransactionAsync(transaction);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
     }
 }

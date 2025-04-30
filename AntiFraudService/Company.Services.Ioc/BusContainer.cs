@@ -17,7 +17,7 @@ public static class BusContainer
             x.AddRider(rider =>
             {
                 rider.AddConsumer<TransactionCreatedConsumer>();
-                rider.AddProducer<TransactionCreatedContract>("transaction-updated");
+                rider.AddProducer<TransactionUpdatedContract>("transaction-updated");
 
                 rider.UsingKafka((context, k) =>
                 {

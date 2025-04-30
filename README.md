@@ -11,6 +11,6 @@ Follow the next steps:
    ```bash
    docker compose up
    ```
-3. Run the services in Visual Studio 2022
+3. Run the services AntiFraud and Transaction in Visual Studio 2022
    ```
 </details>
