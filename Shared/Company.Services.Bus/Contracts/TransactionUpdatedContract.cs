@@ -2,6 +2,6 @@
 
 public record TransactionUpdatedContract
 {
-    public Guid TransactionId { get; set; }
-    public TransactionStatus Status { get; set; }
+    public Guid TransactionExternalId { get; set; }
+    public int Status { get; set; }
 }

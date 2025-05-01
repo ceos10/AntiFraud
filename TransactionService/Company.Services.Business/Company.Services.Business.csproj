@@ -7,12 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Riok.Mapperly" Version="4.1.1" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.4" />
     <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="9.0.4" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\Shared\Company.Services.Bus\Company.Services.Bus.csproj" />
+    <ProjectReference Include="..\..\Shared\Company.Services.ViewModels\Company.Services.ViewModels.csproj" />
     <ProjectReference Include="..\Company.Services.Data\Company.Services.Data.csproj" />
   </ItemGroup>
 

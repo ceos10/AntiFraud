@@ -5,9 +5,9 @@ namespace Company.Services.Data;
 
 public class TransactionRepository : ITransactionRepository
 {
-    public async Task<bool> CreateAsync(Transaction product)
+    public async Task<Transaction> CreateAsync(Transaction product)
     {
-        return await Task.FromResult(true);
+        return await Task.FromResult(new Transaction());
     }
 
     public async Task<Transaction> GetAsync(Guid id)

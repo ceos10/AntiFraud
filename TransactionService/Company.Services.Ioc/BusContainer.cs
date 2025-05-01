@@ -26,7 +26,7 @@ public static class BusContainer
                 rider.UsingKafka((context, k) =>
                 {
                     k.Host(kafkaHost);
-                    k.TopicEndpoint<TransactionUpdatedConsumer>(transactionUpdatedTopic, groupId, e =>
+                    k.TopicEndpoint<TransactionUpdatedContract>(transactionUpdatedTopic, groupId, e =>
                     {
                         e.ConfigureConsumer<TransactionUpdatedConsumer>(context);
                         e.CreateIfMissing();

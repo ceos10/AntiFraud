@@ -1,4 +1,4 @@
-﻿namespace Company.Services.Business.Models;
+﻿namespace Company.Services.ViewModels.Transactions;
 
 public record TransactionViewModel
 {

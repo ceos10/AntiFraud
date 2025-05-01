@@ -6,4 +6,14 @@ public record Transaction
     public Guid TargetAccountId { get; set; }
     public int TransferTypeId { get; set; }
     public decimal Value { get; set; }
+    public Guid TransactionExternalId { get; set; } = Guid.NewGuid();
+    public DateTime CreatedAt { get; set; }
+    public TransactionStatus Status { get; set; } = TransactionStatus.Pending;
+}
+
+public enum TransactionStatus
+{
+    Pending = 0,
+    Approved = 1,
+    Rejected = 2
 }
