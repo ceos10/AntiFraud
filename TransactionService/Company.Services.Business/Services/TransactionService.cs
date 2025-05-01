@@ -21,10 +21,12 @@ public class TransactionService(
         return _mapper.TransactionToTransactionViewModel(transaction);
     }
 
-    public async Task<TransactionViewModel> GetTransactionTransactionAsync(Guid id)
+    public async Task<TransactionViewModel?> GetTransactionTransactionAsync(Guid id)
     {
         var transaction =  await _transactionRepository.GetAsync(id);
-        return _mapper.TransactionToTransactionViewModel(transaction);
+        return transaction is null
+            ? null
+            : _mapper.TransactionToTransactionViewModel(transaction);
     }
 
     public async Task UpdateTransactionStatusAsync(Guid transactionId, Data.Models.TransactionStatus status)

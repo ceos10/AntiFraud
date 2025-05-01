@@ -10,12 +10,13 @@ public class TransactionRepository
 {
     public async Task<Transaction> CreateAsync(Transaction transaction)
     {
-        db.Add(transaction);
+        await db.Transactions.AddAsync(transaction);
         await db.SaveChangesAsync();
-        return await db.Transactions.FindAsync(transaction.TransactionExternalId);
+        return await db.Transactions.FindAsync(transaction.TransactionExternalId)
+               ?? throw new InvalidOperationException("Transaction could not be found after creation.");
     }
 
-    public async Task<Transaction> GetAsync(Guid id)
+    public async Task<Transaction?> GetAsync(Guid id)
     {
         return await db.Transactions.FindAsync(id);
     }
@@ -23,7 +24,7 @@ public class TransactionRepository
     public async Task<bool> UpdateAsync(Transaction transaction)
     {
         db.Transactions.Update(transaction);
-        await db.SaveChangesAsync();
-        return true;
+        var changes = await db.SaveChangesAsync();
+        return changes > 0;
     }
 }
