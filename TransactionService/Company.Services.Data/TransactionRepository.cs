@@ -1,22 +1,29 @@
-﻿using Company.Services.Data.Interface;
+﻿using Company.Services.Data.Contexts;
+using Company.Services.Data.Interface;
 using Company.Services.Data.Models;
 
 namespace Company.Services.Data;
 
-public class TransactionRepository : ITransactionRepository
+public class TransactionRepository
+    (TransactionsDbContext db)
+    : ITransactionRepository
 {
-    public async Task<Transaction> CreateAsync(Transaction product)
+    public async Task<Transaction> CreateAsync(Transaction transaction)
     {
-        return await Task.FromResult(new Transaction());
+        db.Add(transaction);
+        await db.SaveChangesAsync();
+        return await db.Transactions.FindAsync(transaction.TransactionExternalId);
     }
 
     public async Task<Transaction> GetAsync(Guid id)
     {
-        return await Task.FromResult(new Transaction { });
+        return await db.Transactions.FindAsync(id);
     }
 
-    public async Task<bool> UpdateAsync(Transaction product)
+    public async Task<bool> UpdateAsync(Transaction transaction)
     {
-        return await Task.FromResult(true);
+        db.Transactions.Update(transaction);
+        await db.SaveChangesAsync();
+        return true;
     }
 }
