@@ -1,5 +1,7 @@
 # Challenge
 
+![Diagram](docs/assets/diagram.png)
+
 <details open><summary> Running the app </summary> <br />
 Follow the next steps:
 
