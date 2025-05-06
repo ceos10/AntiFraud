@@ -1,7 +1,7 @@
-﻿using Company.Services.Bus.Contracts;
+﻿using Company.Services.Application.Interfaces;
+using Company.Services.Bus.Contracts;
 using Company.Services.Business.Interfaces;
 using Company.Services.Business.Mappers;
-using Company.Services.Data.Interface;
 using Company.Services.ViewModels.Transactions;
 using MassTransit;
 
@@ -29,7 +29,7 @@ public class TransactionService(
             : _mapper.TransactionToTransactionViewModel(transaction);
     }
 
-    public async Task UpdateTransactionStatusAsync(Guid transactionId, Data.Models.TransactionStatus status)
+    public async Task UpdateTransactionStatusAsync(Guid transactionId, Domain.Models.TransactionStatus status)
     {
         var transaction = await _transactionRepository.GetAsync(transactionId);
         if (transaction == null)

@@ -41,6 +41,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infraestructure", "Infraest
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Services.Infraestructure.Persistence", "TransactionService\Company.Services.Infraestructure.Persistence\Company.Services.Infraestructure.Persistence.csproj", "{09A2634B-9AD5-401B-969E-86F11815412C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infraestructure", "Infraestructure", "{8EEEC9F8-9AD9-4EA2-9581-AD733BEE5678}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -108,6 +110,7 @@ Global
 		{E3774B50-CB1A-0904-9E73-3A8994A34AEC} = {8889C832-13FB-4F23-A041-1E83D24C650F}
 		{1042BADB-203C-4E62-B0FD-66D35698DB69} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{09A2634B-9AD5-401B-969E-86F11815412C} = {1042BADB-203C-4E62-B0FD-66D35698DB69}
+		{8EEEC9F8-9AD9-4EA2-9581-AD733BEE5678} = {4868D71E-ED5E-4683-A09D-BC721F757E47}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D64014D8-16DB-4616-82EB-5EDE28E2F28F}

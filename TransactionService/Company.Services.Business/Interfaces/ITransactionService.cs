@@ -1,4 +1,4 @@
-﻿using Company.Services.Data.Models;
+﻿using Company.Services.Domain.Models;
 using Company.Services.ViewModels.Transactions;
 
 namespace Company.Services.Business.Interfaces;

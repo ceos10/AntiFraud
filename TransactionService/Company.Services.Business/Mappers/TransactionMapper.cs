@@ -1,5 +1,5 @@
 ﻿using Company.Services.Bus.Contracts;
-using Company.Services.Data.Models;
+using Company.Services.Domain.Models;
 using Company.Services.ViewModels.Transactions;
 using Riok.Mapperly.Abstractions;
 
