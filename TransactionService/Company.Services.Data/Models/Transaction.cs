@@ -1,4 +1,4 @@
-﻿namespace Company.Services.Data.Models;
+﻿namespace Company.Services.Domain.Models;
 
 public record Transaction
 {

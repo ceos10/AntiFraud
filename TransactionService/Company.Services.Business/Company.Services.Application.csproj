@@ -15,7 +15,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Shared\Company.Services.Bus\Company.Services.Bus.csproj" />
     <ProjectReference Include="..\..\Shared\Company.Services.ViewModels\Company.Services.ViewModels.csproj" />
-    <ProjectReference Include="..\Company.Services.Data\Company.Services.Data.csproj" />
+    <ProjectReference Include="..\Company.Services.Data\Company.Services.Domain.csproj" />
   </ItemGroup>
 
 </Project>

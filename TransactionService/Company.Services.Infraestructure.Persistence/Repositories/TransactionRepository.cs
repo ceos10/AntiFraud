@@ -1,8 +1,8 @@
-﻿using Company.Services.Data.Contexts;
-using Company.Services.Data.Interface;
-using Company.Services.Data.Models;
+﻿using Company.Services.Application.Interfaces;
+using Company.Services.Domain.Models;
+using Company.Services.Infraestructure.Persistence.Contexts;
 
-namespace Company.Services.Data;
+namespace Company.Services.Infraestructure.Persistence.Repositories;
 
 public class TransactionRepository
     (TransactionsDbContext db)
@@ -28,3 +28,4 @@ public class TransactionRepository
         return changes > 0;
     }
 }
+

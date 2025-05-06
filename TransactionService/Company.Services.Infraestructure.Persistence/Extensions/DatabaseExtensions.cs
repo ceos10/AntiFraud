@@ -1,8 +1,8 @@
-﻿using Company.Services.Data.Contexts;
+﻿using Company.Services.Infraestructure.Persistence.Contexts;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Company.Services.Data.Extensions;
+namespace Company.Services.Infraestructure.Persistence.Extensions;
 
 public static class DatabaseExtensions
 {
@@ -17,3 +17,4 @@ public static class DatabaseExtensions
         return app;
     }
 }
+

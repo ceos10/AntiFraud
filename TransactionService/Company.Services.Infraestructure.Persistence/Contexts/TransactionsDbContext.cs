@@ -1,7 +1,7 @@
-﻿using Company.Services.Data.Models;
+﻿using Company.Services.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Company.Services.Data.Contexts;
+namespace Company.Services.Infraestructure.Persistence.Contexts;
 
 public class TransactionsDbContext : DbContext
 {
@@ -22,3 +22,4 @@ public class TransactionsDbContext : DbContext
         });
     }
 }
+
