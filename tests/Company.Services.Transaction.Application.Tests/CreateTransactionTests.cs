@@ -13,6 +13,9 @@ public class CreateTransactionTests: TransactionUnitTest
         // Arrange
         var request = new TransactionRequestViewModel
         {
+            SourceAccountId = Guid.NewGuid(),
+            TargetAccountId = Guid.NewGuid(),
+            TransferTypeId = 1,
             Value = 1000
         };
 

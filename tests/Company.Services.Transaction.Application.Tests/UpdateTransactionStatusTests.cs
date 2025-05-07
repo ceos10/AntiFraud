@@ -42,7 +42,7 @@ public class UpdateTransactionStatusTests : TransactionUnitTest
 
         TransactionRepositoryMock
             .Setup(repo => repo.GetAsync(transactionId))
-            .ReturnsAsync((Domain.Models.Transaction)null);
+            .ReturnsAsync((Domain.Models.Transaction?)null);
 
         // Act
         await TransactionService.UpdateTransactionStatusAsync(transactionId, TransactionStatus.Approved);

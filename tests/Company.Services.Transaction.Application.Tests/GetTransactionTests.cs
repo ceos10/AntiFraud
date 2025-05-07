@@ -44,7 +44,7 @@ public class GetTransactionTests : TransactionUnitTest
 
         TransactionRepositoryMock
             .Setup(repo => repo.GetAsync(transactionId))
-            .ReturnsAsync((Domain.Models.Transaction)null);
+            .ReturnsAsync((Domain.Models.Transaction?)null);
 
         // Act
         var result = await TransactionService.GetTransactionAsync(transactionId);
