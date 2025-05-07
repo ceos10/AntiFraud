@@ -17,17 +17,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{8889C832-1
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{0C7CC536-90D0-4BEC-8AE6-FF8DC14A4442}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Services.Shared.Contracts", "Shared\Company.Services.ViewModels\Company.Services.Shared.Contracts.csproj", "{D354927B-9FA7-4ECA-9396-0518A3CD5892}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Services.Shared.Contracts", "Shared\Company.Services.Shared.Contracts\Company.Services.Shared.Contracts.csproj", "{D354927B-9FA7-4ECA-9396-0518A3CD5892}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{66233A9C-1F76-457E-AE39-66D2E36D359E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{AE3624D7-3D53-45B4-944B-69E22B7A640B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Services.Application", "AntiFraudService\Company.Services.Business\Company.Services.Application.csproj", "{D91D2487-EDC2-18B3-3EED-B98A9B8D4C1E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Services.Application", "AntiFraudService\Company.Services.Application\Company.Services.Application.csproj", "{D91D2487-EDC2-18B3-3EED-B98A9B8D4C1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Services.Application", "TransactionService\Company.Services.Business\Company.Services.Application.csproj", "{34A787D3-C6A6-96B8-0EBC-5AACA0370E94}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Services.Application", "TransactionService\Company.Services.Application\Company.Services.Application.csproj", "{34A787D3-C6A6-96B8-0EBC-5AACA0370E94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Services.Domain", "TransactionService\Company.Services.Data\Company.Services.Domain.csproj", "{E3774B50-CB1A-0904-9E73-3A8994A34AEC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Services.Domain", "TransactionService\Company.Services.Domain\Company.Services.Domain.csproj", "{E3774B50-CB1A-0904-9E73-3A8994A34AEC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infraestructure", "Infraestructure", "{1042BADB-203C-4E62-B0FD-66D35698DB69}"
 EndProject
