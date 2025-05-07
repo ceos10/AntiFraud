@@ -26,7 +26,7 @@ public class TransactionEndpoints : IEndpointRouteDefinition
         group.MapGet("transactions/{id:guid}",
         async (Guid id, [FromServices] ITransactionService productService) =>
         {
-            var product = await productService.GetTransactionTransactionAsync(id);
+            var product = await productService.GetTransactionAsync(id);
             return product != null ? Results.Ok(product) : Results.NotFound("Transaction not found");
         })
         .Produces<TransactionViewModel>(StatusCodes.Status200OK)

@@ -19,7 +19,7 @@ public class TransactionService(
         return _mapper.TransactionToTransactionViewModel(transaction);
     }
 
-    public async Task<TransactionViewModel?> GetTransactionTransactionAsync(Guid id)
+    public async Task<TransactionViewModel?> GetTransactionAsync(Guid id)
     {
         var transaction =  await _transactionRepository.GetAsync(id);
         return transaction is null
