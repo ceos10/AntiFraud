@@ -1,4 +1,4 @@
-﻿namespace Company.Services.ViewModels.Transactions;
+﻿namespace Company.Services.Shared.Contracts.ViewModels.Transactions;
 
 public record TransactionAntiFraudViewModel
 {

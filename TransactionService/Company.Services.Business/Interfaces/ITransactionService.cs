@@ -1,5 +1,5 @@
 ﻿using Company.Services.Domain.Models;
-using Company.Services.ViewModels.Transactions;
+using Company.Services.Shared.Contracts.ViewModels.Transactions;
 
 namespace Company.Services.Business.Interfaces;
 

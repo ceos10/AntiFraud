@@ -1,6 +1,6 @@
-﻿using Company.Services.ViewModels.Transactions.Enums;
+﻿using Company.Services.Shared.Contracts.ViewModels.Transactions.Enums;
 
-namespace Company.Services.ViewModels.Transactions;
+namespace Company.Services.Shared.Contracts.ViewModels.Transactions;
 
 public record TransactionViewModel
 {

@@ -1,8 +1,8 @@
-﻿using Company.Services.Bus.Contracts;
-using Company.Services.Business.Interfaces;
+﻿using Company.Services.Business.Interfaces;
+using Company.Services.Shared.Contracts.BusContracts.Transactions;
 using MassTransit;
 
-namespace Company.Services.Business.Consumers;
+namespace Company.Service.Infraestructure.Bus.Consumers;
 
 public class TransactionUpdatedConsumer(
     ITransactionService _transactionService)
@@ -13,7 +13,7 @@ public class TransactionUpdatedConsumer(
         try
         {
             var transaction = context.Message;
-            await _transactionService.UpdateTransactionStatusAsync(transaction.TransactionExternalId, (Domain.Models.TransactionStatus)transaction.Status);
+            await _transactionService.UpdateTransactionStatusAsync(transaction.TransactionExternalId, (Services.Domain.Models.TransactionStatus)transaction.Status);
         }
         catch (Exception)
         {

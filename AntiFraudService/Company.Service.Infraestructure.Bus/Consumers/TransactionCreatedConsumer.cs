@@ -1,14 +1,14 @@
-﻿using Company.Services.Bus.Contracts;
-using Company.Services.Business.Interfaces;
+﻿using Company.Services.Business.Interfaces;
 using Company.Services.Business.Mappers;
+using Company.Services.Shared.Contracts.BusContracts.Transactions;
 using MassTransit;
 
-namespace Company.Services.Business.Consumers;
+namespace Company.Service.Infraestructure.Bus.Consumers;
 
 public class TransactionCreatedConsumer(
     AntiFraudMapper antiFraudMapper,
     IAntiFraudService _antiFraudService)
-    :IConsumer<TransactionCreatedContract>
+    : IConsumer<TransactionCreatedContract>
 {
     public async Task Consume(ConsumeContext<TransactionCreatedContract> context)
     {

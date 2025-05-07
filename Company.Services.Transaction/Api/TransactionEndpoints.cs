@@ -1,6 +1,6 @@
 ﻿using Company.Services.Business.Interfaces;
+using Company.Services.Shared.Contracts.ViewModels.Transactions;
 using Company.Services.Transaction.Interfaces;
-using Company.Services.ViewModels.Transactions;
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Mime;
 

@@ -12,8 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Shared\Company.Services.Bus\Company.Services.Bus.csproj" />
-    <ProjectReference Include="..\..\Shared\Company.Services.ViewModels\Company.Services.ViewModels.csproj" />
+    <ProjectReference Include="..\..\Shared\Company.Services.ViewModels\Company.Services.Shared.Contracts.csproj" />
   </ItemGroup>
 
 </Project>

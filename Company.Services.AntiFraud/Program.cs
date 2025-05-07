@@ -16,7 +16,7 @@ namespace Company.Services.AntiFraud
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddApplicationLayer()
-                .RegisterKafka(builder.Configuration);
+                .AddMessaging(builder.Configuration);
 
             var app = builder.Build();
 

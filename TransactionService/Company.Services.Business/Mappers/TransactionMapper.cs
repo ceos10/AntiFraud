@@ -1,6 +1,6 @@
-﻿using Company.Services.Bus.Contracts;
-using Company.Services.Domain.Models;
-using Company.Services.ViewModels.Transactions;
+﻿using Company.Services.Domain.Models;
+using Company.Services.Shared.Contracts.BusContracts.Transactions;
+using Company.Services.Shared.Contracts.ViewModels.Transactions;
 using Riok.Mapperly.Abstractions;
 
 namespace Company.Services.Business.Mappers;

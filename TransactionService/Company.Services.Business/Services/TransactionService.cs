@@ -1,14 +1,13 @@
 ﻿using Company.Services.Application.Interfaces;
-using Company.Services.Bus.Contracts;
 using Company.Services.Business.Interfaces;
 using Company.Services.Business.Mappers;
-using Company.Services.ViewModels.Transactions;
-using MassTransit;
+using Company.Services.Shared.Contracts.BusContracts.Transactions;
+using Company.Services.Shared.Contracts.ViewModels.Transactions;
 
 namespace Company.Services.Business.Services;
 
 public class TransactionService(
-    ITopicProducer<TransactionCreatedContract> _producer,
+    IMessageProducer<TransactionCreatedContract> _producer,
     TransactionMapper _mapper,
     ITransactionRepository _transactionRepository) : ITransactionService
 {
@@ -17,7 +16,7 @@ public class TransactionService(
         var transactionDbRequest = _mapper.TransactionRequestViewModelToTransaction(request);
         var transaction =  await _transactionRepository.CreateAsync(transactionDbRequest);
         var transactionMessage = _mapper.TransactionToTransactionCreatedContract(transaction);
-        await _producer.Produce(transactionMessage);
+        await _producer.ProduceAsync(transactionMessage);
         return _mapper.TransactionToTransactionViewModel(transaction);
     }
 

@@ -1,5 +1,7 @@
-﻿using Company.Services.Bus.Contracts;
-using Company.Services.Business.Consumers;
+﻿using Company.Service.Infraestructure.Bus.Consumers;
+using Company.Service.Infraestructure.Bus.Messaging;
+using Company.Services.Application.Interfaces;
+using Company.Services.Shared.Contracts.BusContracts.Transactions;
 using MassTransit;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -10,6 +12,8 @@ public static class ServiceCollectionExtensions
 {
     public static IServiceCollection RegisterKafka(this IServiceCollection services, IConfiguration configuration)
     {
+        services.AddScoped(typeof(IMessageProducer<>), typeof(MessageProducer<>));
+
         var transactionCreatedTopic = configuration["AppSettings:TransactionCreatedTopic"];
         var transactionUpdatedTopic = configuration["AppSettings:TransactionUpdatedTopic"];
         var groupId = configuration["AppSettings:GroupId"];

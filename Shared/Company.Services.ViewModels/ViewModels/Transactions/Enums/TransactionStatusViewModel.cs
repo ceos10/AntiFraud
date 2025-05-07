@@ -1,4 +1,4 @@
-﻿namespace Company.Services.ViewModels.Transactions.Enums;
+﻿namespace Company.Services.Shared.Contracts.ViewModels.Transactions.Enums;
 
 public enum TransactionStatusViewModel
 {

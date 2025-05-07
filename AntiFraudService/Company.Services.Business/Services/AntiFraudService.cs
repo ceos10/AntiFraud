@@ -1,13 +1,13 @@
-﻿using Company.Services.Bus.Contracts;
+﻿using Company.Services.Application.Interfaces;
 using Company.Services.Business.Interfaces;
-using Company.Services.ViewModels.Transactions;
-using Company.Services.ViewModels.Transactions.Enums;
-using MassTransit;
+using Company.Services.Shared.Contracts.BusContracts.Transactions;
+using Company.Services.Shared.Contracts.ViewModels.Transactions;
+using Company.Services.Shared.Contracts.ViewModels.Transactions.Enums;
 
 namespace Company.Services.Business.Services;
 
 public class AntiFraudService(
-    ITopicProducer<TransactionUpdatedContract> _producer)
+    IMessageProducer<TransactionUpdatedContract> _messageProducer)
     : IAntiFraudService
 {
     public async Task AnalyzeTransactionAsync(TransactionAntiFraudViewModel request)
@@ -17,6 +17,6 @@ public class AntiFraudService(
             Status = request.Value > 2000 ? (int)TransactionStatusViewModel.Rejected : (int)TransactionStatusViewModel.Approved
         };
 
-        await _producer.Produce(transactionUpdated);
+        await _messageProducer.ProduceAsync(transactionUpdated);
     }
 }
