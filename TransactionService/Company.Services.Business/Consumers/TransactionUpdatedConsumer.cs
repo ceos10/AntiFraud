@@ -13,7 +13,7 @@ public class TransactionUpdatedConsumer(
         try
         {
             var transaction = context.Message;
-            await _transactionService.UpdateTransactionStatusAsync(transaction.TransactionExternalId, (Data.Models.TransactionStatus)transaction.Status);
+            await _transactionService.UpdateTransactionStatusAsync(transaction.TransactionExternalId, (Domain.Models.TransactionStatus)transaction.Status);
         }
         catch (Exception)
         {
