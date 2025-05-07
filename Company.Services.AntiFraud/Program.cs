@@ -1,5 +1,5 @@
-
-using Company.Services.Ioc;
+using Company.Service.Infraestructure.Bus.Extensions;
+using Company.Services.Application.Extensions;
 
 namespace Company.Services.AntiFraud
 {
@@ -15,7 +15,7 @@ namespace Company.Services.AntiFraud
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-            builder.Services.RegisterBusiness(builder.Configuration)
+            builder.Services.AddApplicationLayer()
                 .RegisterKafka(builder.Configuration);
 
             var app = builder.Build();

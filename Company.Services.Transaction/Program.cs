@@ -1,7 +1,8 @@
 
+using Company.Service.Infraestructure.Bus.Extensions;
+using Company.Services.Application.Extensions;
+using Company.Services.Infraestructure.Persistence.Extensions;
 using Company.Services.Transaction.Extensions;
-using Company.Services.Ioc;
-using Company.Services.Data.Extensions;
 
 namespace Company.Services.Transaction;
 
@@ -17,18 +18,11 @@ public class Program
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
-        builder.Services.RegisterBusiness(builder.Configuration)
-            .RegisterDatabase(builder.Configuration)
+        builder.Services.AddApplicationLayer()
+            .AddPersistenceInfrastructure(builder.Configuration)
             .RegisterKafka(builder.Configuration);
 
         var app = builder.Build();
-
-        //// Automatically create database and tables if they don't exist
-        //using (var scope = app.Services.CreateScope())
-        //{
-        //    var db = scope.ServiceProvider.GetRequiredService<TransactionsDbContext>();
-        //    db.Database.EnsureCreated();
-        //}
 
         // Automatically create database and tables if they don't exist
         app.EnsureDatabaseCreated();

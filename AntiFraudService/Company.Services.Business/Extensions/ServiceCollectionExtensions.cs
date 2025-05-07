@@ -8,7 +8,7 @@ namespace Company.Services.Application.Extensions;
 
 public static class ServiceCollectionExtensions
 {
-    public static IServiceCollection AddApplicationLayer(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddApplicationLayer(this IServiceCollection services)
     {
         services.AddScoped<IAntiFraudService, AntiFraudService>();
         services.AddScoped<AntiFraudMapper>();
