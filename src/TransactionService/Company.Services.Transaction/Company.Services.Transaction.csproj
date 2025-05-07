@@ -13,9 +13,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TransactionService\Company.Service.Infraestructure.Bus\Company.Service.Infraestructure.Bus.csproj" />
-    <ProjectReference Include="..\TransactionService\Company.Services.Application\Company.Services.Application.csproj" />
-    <ProjectReference Include="..\TransactionService\Company.Services.Infraestructure.Persistence\Company.Services.Infraestructure.Persistence.csproj" />
+    <ProjectReference Include="..\Company.Service.Infraestructure.Bus\Company.Service.Infraestructure.Bus.csproj" />
+    <ProjectReference Include="..\Company.Services.Application\Company.Services.Application.csproj" />
+    <ProjectReference Include="..\Company.Services.Infraestructure.Persistence\Company.Services.Infraestructure.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

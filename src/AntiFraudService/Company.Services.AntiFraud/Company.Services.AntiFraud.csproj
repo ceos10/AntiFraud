@@ -13,8 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AntiFraudService\Company.Service.Infraestructure.Bus\Company.Service.Infraestructure.Bus.csproj" />
-    <ProjectReference Include="..\AntiFraudService\Company.Services.Application\Company.Services.Application.csproj" />
+    <ProjectReference Include="..\Company.Service.Infraestructure.Bus\Company.Service.Infraestructure.Bus.csproj" />
+    <ProjectReference Include="..\Company.Services.Application\Company.Services.Application.csproj" />
   </ItemGroup>
 
 </Project>

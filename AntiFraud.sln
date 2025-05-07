@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35818.85
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Services.Transaction", "Company.Services.Transaction\Company.Services.Transaction.csproj", "{B3F5B599-EEE0-4233-962A-C0CC171A9623}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Services.Transaction", "src\TransactionService\Company.Services.Transaction\Company.Services.Transaction.csproj", "{B3F5B599-EEE0-4233-962A-C0CC171A9623}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Services.AntiFraud", "Company.Services.AntiFraud\Company.Services.AntiFraud.csproj", "{9187971E-6E5C-45AD-B67F-EEB59BEEE030}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Services.AntiFraud", "src\AntiFraudService\Company.Services.AntiFraud\Company.Services.AntiFraud.csproj", "{9187971E-6E5C-45AD-B67F-EEB59BEEE030}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TransactionService", "TransactionService", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
@@ -17,27 +17,27 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{8889C832-1
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{0C7CC536-90D0-4BEC-8AE6-FF8DC14A4442}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Services.Shared.Contracts", "Shared\Company.Services.Shared.Contracts\Company.Services.Shared.Contracts.csproj", "{D354927B-9FA7-4ECA-9396-0518A3CD5892}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Services.Shared.Contracts", "src\Shared\Company.Services.Shared.Contracts\Company.Services.Shared.Contracts.csproj", "{D354927B-9FA7-4ECA-9396-0518A3CD5892}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{66233A9C-1F76-457E-AE39-66D2E36D359E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{AE3624D7-3D53-45B4-944B-69E22B7A640B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Services.Application", "AntiFraudService\Company.Services.Application\Company.Services.Application.csproj", "{D91D2487-EDC2-18B3-3EED-B98A9B8D4C1E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Services.Application", "src\AntiFraudService\Company.Services.Application\Company.Services.Application.csproj", "{D91D2487-EDC2-18B3-3EED-B98A9B8D4C1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Services.Application", "TransactionService\Company.Services.Application\Company.Services.Application.csproj", "{34A787D3-C6A6-96B8-0EBC-5AACA0370E94}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Services.Application", "src\TransactionService\Company.Services.Application\Company.Services.Application.csproj", "{34A787D3-C6A6-96B8-0EBC-5AACA0370E94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Services.Domain", "TransactionService\Company.Services.Domain\Company.Services.Domain.csproj", "{E3774B50-CB1A-0904-9E73-3A8994A34AEC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Services.Domain", "src\TransactionService\Company.Services.Domain\Company.Services.Domain.csproj", "{E3774B50-CB1A-0904-9E73-3A8994A34AEC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infraestructure", "Infraestructure", "{1042BADB-203C-4E62-B0FD-66D35698DB69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Services.Infraestructure.Persistence", "TransactionService\Company.Services.Infraestructure.Persistence\Company.Services.Infraestructure.Persistence.csproj", "{09A2634B-9AD5-401B-969E-86F11815412C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Services.Infraestructure.Persistence", "src\TransactionService\Company.Services.Infraestructure.Persistence\Company.Services.Infraestructure.Persistence.csproj", "{09A2634B-9AD5-401B-969E-86F11815412C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infraestructure", "Infraestructure", "{8EEEC9F8-9AD9-4EA2-9581-AD733BEE5678}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Service.Infraestructure.Bus", "TransactionService\Company.Service.Infraestructure.Bus\Company.Service.Infraestructure.Bus.csproj", "{02583722-5F8B-49A8-B87A-9B3A5CBFFEA5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Service.Infraestructure.Bus", "src\TransactionService\Company.Service.Infraestructure.Bus\Company.Service.Infraestructure.Bus.csproj", "{02583722-5F8B-49A8-B87A-9B3A5CBFFEA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Service.Infraestructure.Bus", "AntiFraudService\Company.Service.Infraestructure.Bus\Company.Service.Infraestructure.Bus.csproj", "{61BDF88C-EB24-40C5-933C-4D54EE40767C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Service.Infraestructure.Bus", "src\AntiFraudService\Company.Service.Infraestructure.Bus\Company.Service.Infraestructure.Bus.csproj", "{61BDF88C-EB24-40C5-933C-4D54EE40767C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -92,6 +92,7 @@ Global
 		{4868D71E-ED5E-4683-A09D-BC721F757E47} = {66233A9C-1F76-457E-AE39-66D2E36D359E}
 		{82A3746C-3418-44E2-937C-EE61FF6AF87D} = {4868D71E-ED5E-4683-A09D-BC721F757E47}
 		{8889C832-13FB-4F23-A041-1E83D24C650F} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{0C7CC536-90D0-4BEC-8AE6-FF8DC14A4442} = {66233A9C-1F76-457E-AE39-66D2E36D359E}
 		{D354927B-9FA7-4ECA-9396-0518A3CD5892} = {0C7CC536-90D0-4BEC-8AE6-FF8DC14A4442}
 		{D91D2487-EDC2-18B3-3EED-B98A9B8D4C1E} = {82A3746C-3418-44E2-937C-EE61FF6AF87D}
 		{34A787D3-C6A6-96B8-0EBC-5AACA0370E94} = {8889C832-13FB-4F23-A041-1E83D24C650F}
