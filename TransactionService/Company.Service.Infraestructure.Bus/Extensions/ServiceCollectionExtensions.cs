@@ -10,7 +10,7 @@ namespace Company.Service.Infraestructure.Bus.Extensions;
 
 public static class ServiceCollectionExtensions
 {
-    public static IServiceCollection RegisterKafka(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddMessaging(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddScoped(typeof(IMessageProducer<>), typeof(MessageProducer<>));
 

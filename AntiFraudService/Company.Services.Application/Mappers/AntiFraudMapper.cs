@@ -2,7 +2,7 @@
 using Company.Services.Shared.Contracts.ViewModels.Transactions;
 using Riok.Mapperly.Abstractions;
 
-namespace Company.Services.Business.Mappers;
+namespace Company.Services.Application.Mappers;
 
 [Mapper]
 public partial class AntiFraudMapper

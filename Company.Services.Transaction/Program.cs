@@ -20,7 +20,7 @@ public class Program
         builder.Services.AddSwaggerGen();
         builder.Services.AddApplicationLayer()
             .AddPersistenceInfrastructure(builder.Configuration)
-            .RegisterKafka(builder.Configuration);
+            .AddMessaging(builder.Configuration);
 
         var app = builder.Build();
 

@@ -1,4 +1,4 @@
-﻿using Company.Services.Business.Interfaces;
+﻿using Company.Services.Application.Interfaces;
 using Company.Services.Shared.Contracts.BusContracts.Transactions;
 using MassTransit;
 

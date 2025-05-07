@@ -1,7 +1,6 @@
-﻿using Company.Services.Business.Interfaces;
-using Company.Services.Business.Mappers;
-using Company.Services.Business.Services;
-using Microsoft.Extensions.Configuration;
+﻿using Company.Services.Application.Interfaces;
+using Company.Services.Application.Mappers;
+using Company.Services.Application.Services;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Company.Services.Application.Extensions;

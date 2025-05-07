@@ -1,7 +1,7 @@
 ﻿using Company.Services.Domain.Models;
 using Company.Services.Shared.Contracts.ViewModels.Transactions;
 
-namespace Company.Services.Business.Interfaces;
+namespace Company.Services.Application.Interfaces;
 
 public interface ITransactionService
 {

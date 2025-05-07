@@ -1,10 +1,9 @@
 ﻿using Company.Services.Application.Interfaces;
-using Company.Services.Business.Interfaces;
-using Company.Services.Business.Mappers;
+using Company.Services.Application.Mappers;
 using Company.Services.Shared.Contracts.BusContracts.Transactions;
 using Company.Services.Shared.Contracts.ViewModels.Transactions;
 
-namespace Company.Services.Business.Services;
+namespace Company.Services.Application.Services;
 
 public class TransactionService(
     IMessageProducer<TransactionCreatedContract> _producer,
